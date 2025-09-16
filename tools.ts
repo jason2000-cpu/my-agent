@@ -1,3 +1,4 @@
+import fs from 'fs'
 import { tool } from 'ai';
 import { simpleGit } from 'simple-git';
 import { generateText } from 'ai';
@@ -47,7 +48,19 @@ export const  getGitCommitMessageTool = tool({
             model: google("models/gemini-2.5-flash"),
             prompt: `Based on this changes generate a git commit message: ${diffs.map((d) => `${d.file}: ${d.diff}`).join("\n")}`,
         });
-        // stdout.write(`Generated commit message: ${text}\n`);
+        stdout.write(`Generated commit message: ${text}\n`);
         return text;
+    }
+})
+
+export const writeMarkdownFileTool = tool({
+    description: "Writes the markdown file content",
+    inputSchema: z.object({
+        content: z.string().min(1),
+    }),
+    execute: async ({  content }) => {
+        fs.writeFileSync('README.md', content);
+        stdout.write(`Generated README.md\n`);
+        return 'README.md';
     }
 })

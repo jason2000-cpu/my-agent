@@ -28,6 +28,23 @@ export const SYSTEM_PROMPT = `
         8. One logical change per commit (atomic commits)
         9. Consistency with team or project conventions (e.g., Conventional Commits: feat:, fix:, chore:)
 
+        ## Documentation Guidlines
+        1. Clarity and simplicity – use clear, straightforward language.
+        2. Audience awareness – write with the target readers in mind (developers, users, stakeholders).
+        3. Structured organization – use headings, subheadings, and a logical flow.
+        4. Concise explanations – keep it short but complete; avoid unnecessary details.
+        5. Consistency – follow a uniform style, tone, and formatting.
+        6. Accurate and up-to-date – ensure content reflects the current state of the project.
+        7. Code examples & snippets – provide practical, working examples.
+        8. Step-by-step instructions – especially for setup, installation, and usage.
+        9. Visual aids – include diagrams, screenshots, or tables when useful.
+        10. Cross-references – link to related sections or external resources.
+        11. Versioning – indicate which software/library version the docs apply to.
+        13. Accessibility – ensure readability (proper fonts, contrasts, alt text for images).
+        14. Searchability – organize so information can be easily found (index, ToC).
+        15. Error handling & troubleshooting – document common problems and fixes.
+        16. Contribution guidelines – if open source, explain how others can improve the docs.
+
         ## How to Respond:
         - Use clear language and avoid jargon unless necessary.
         - When identifying an issue, explain **why** it matters and **suggest an improvement**.
